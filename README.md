@@ -70,11 +70,9 @@ app/        pages (dashboard, patients, variants, trials, annotations, login)
 components/ Nav, Table, useFetch
 ```
 
-## Team contributions
-| Member | Responsibilities |
-|---|---|
-| Zia (PES2UG24CS620) | _fill in_ |
-| _Teammate_ | _fill in_ |
+## Team members
+- Zia Kadijah (PES2UG24CS620)
+- Arvind Kothamangala (PES2UG24CS628)
 
 ## Notes
 Patient, sample and result data is synthetic; gene, condition and drug names are real. MongoDB annotation values (frequencies, scores, paper titles) are synthetic placeholders.
