@@ -1,0 +1,16 @@
+# Optional: one command to get MySQL (schema + data + advanced features) and MongoDB running.
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+    ports: ["3307:3306"]
+    volumes:
+      - ./sql/01_schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./sql/02_data.sql:/docker-entrypoint-initdb.d/02_data.sql:ro
+      - ./sql/03_alter_index_function.sql:/docker-entrypoint-initdb.d/03_alter_index_function.sql:ro
+      - ./sql/04_advanced.sql:/docker-entrypoint-initdb.d/04_advanced.sql:ro
+      - ./sql/05_auth.sql:/docker-entrypoint-initdb.d/05_auth.sql:ro
+  mongo:
+    image: mongo:7
+    ports: ["27017:27017"]
